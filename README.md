@@ -34,10 +34,6 @@ client.start()
   client.get_value(Key, DefaultValue)
   ```
 
-# Contribution
-  * Source Code: https://github.com/filamoon/pyapollo/
-  * Issue Tracker: https://github.com/filamoon/pyapollo/issues
-  
 # License
 The project is licensed under the [Apache 2 license](https://github.com/zouyx/agollo/blob/master/LICENSE).
 
