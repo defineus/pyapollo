@@ -26,11 +26,12 @@ class ApolloClient(object):
             self._cache[namespace] = {}
             logging.getLogger(__name__).info("Add namespace '%s' to local cache", namespace)
             # This is a new namespace, need to do a blocking fetch to populate the local cache
-            self._long_poll()
+
 
         if namespace not in self._notification_map:
             self._notification_map[namespace] = -1
             logging.getLogger(__name__).info("Add namespace '%s' to local notification map", namespace)
+            self._long_poll()
 
         if key in self._cache[namespace]:
             return self._cache[namespace][key]
